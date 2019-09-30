@@ -1,6 +1,6 @@
 # Automating Component-publishing with a Webpack-loader
 
-![feature-image](https://unsplash.com/photos/4XvAZN8_WHo)
+![feature-image](https://images.unsplash.com/photo-1553159925-02b2e24f471d?ixlib=rb-1.2.1&auto=format&fit=crop&w=3294&q=80)
 
 In a project that I'm currently working on, we are building a Site-Authoring system that allows
 authors to design pages with templates and React Components. The templates have placeholders in them that are
