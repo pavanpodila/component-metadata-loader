@@ -1,18 +1,21 @@
 # Automating Component-publishing with a Webpack-loader
 
+![feature-image](https://unsplash.com/photos/4XvAZN8_WHo)
+
 In a project that I'm currently working on, we are building a Site-Authoring system that allows
 authors to design pages with templates and React Components. The templates have placeholders in them that are
 eventually filled with some defined Components from the Component Gallery. These components have
 metadata, which is used to render the `title`, `description`, and `thumbnail`. Additionally, they
 will have `properties` which can be configured in the _Property Panel_.
 
-![Image showing the gallery and properties panel](images/authoring-app.png)
+![Component Gallery and Property panel](images/authoring-app.png)
 
 One part of this system consists of a workflow to publish the components to the
 gallery. It requires defining metadata for all the components that can be used during authoring
 . This metadata needs to be uploaded to some persistence layer, so that the gallery can pull it from there.
 
-![workflow showing the process of pushing metadata to a persistence layer](images/publishing-workflow.png)
+![Workflow showing the process of pushing metadata to a persistence layer](images/publishing
+-workflow.png)
 
 ## Defining Metadata
 
