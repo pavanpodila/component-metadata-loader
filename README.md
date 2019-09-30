@@ -207,5 +207,4 @@ the co-location benefit made us adopt the decorator based approach. It's true th
 more work needed to build the loader, but the overall automation that we could achieve was
 totally worth it.
 
-> The markdown was converted to a Medium post using [this converter](http://markdown-to-medium
-> .surge.sh/).
+> The markdown was converted to a Medium post using [this converter](http://markdown-to-medium.surge.sh/).
