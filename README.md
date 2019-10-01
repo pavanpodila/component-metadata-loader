@@ -19,7 +19,8 @@ gallery. It requires defining metadata for all the components that can be used d
 
 ## Defining Metadata
 
-Every component will need some metadata to become identifiable and usable from the component-gallery. This metadata can be defined as static `json`. One option is to keep a separate `<component>.json` file
+Every component will need some metadata to become identifiable and usable from the component
+-gallery. This metadata can be defined as static `json`. One option is to keep a separate `<component>.json` file
 next to the `<component>.jsx`. However there is an overhead of keeping the two files in sync.
 
 Although the metadata should not change that often, it is still good to co-locate this metadata
@@ -58,7 +59,7 @@ metadata to the persistence layer. Only then can the _component-gallery_ fetch i
 the components.
 
 Part of this job will be handled by a **Webpack-loader**. The loader would read the `@Metadata`
-decorator and generate an artifact (`<name>.component.json`). Equipped with these `*.component .json` files, we can have a build step that would upload them to the persistence layer. The
+decorator and generate an artifact (`<name>.component.json`). Equipped with these `*.component.json` files, we can have a build step that would upload them to the persistence layer. The
 overall flow looks like so:
 
 ![flow of extracting and pushing metadata](images/publishing-workflow.png)
@@ -203,11 +204,14 @@ The same endpoint is also used for fetching the metadata on the Authoring App.
 
 Although the idea of using a webpack-loader seems obvious in hindsight, it wasn't the case when
 we were still exploring how the metadata should be defined. The metadata being static required
-us to debate the merits / demerits of choosing plain JSON files over a decorator.
+us to debate the merits / demerits of choosing plain _JSON_ files over a **decorator**.
 
 Ultimately
 the co-location benefit made us adopt the decorator based approach. It's true that there is
 more work needed to build the loader, but the overall automation that we could achieve was
 totally worth it.
+
+**Note**: In this iteration, we have not focused on _component versioning_ as we want the Authors to use the latest components.
+I’ve skipped a few details on the consumption of these components in the Authoring App. This is to keep the focus on the loader rather than the App.
 
 > The markdown was converted to a Medium post using [this converter](http://markdown-to-medium.surge.sh/).
